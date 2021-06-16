@@ -1,0 +1,19 @@
+
+  .item{
+    display: grid;
+    grid-template-areas: 
+    "img p";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 11fr;
+    margin-bottom: 25px;
+  }
+  .item p {
+    grid-area: p;
+    display: block;
+  }  
+  .item img{
+    grid-area: img;
+    height: 60px;
+    border-radius: 50px;
+    display: block;
+  }

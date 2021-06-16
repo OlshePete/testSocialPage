@@ -1,0 +1,15 @@
+
+.nav{
+    grid-area: n;
+    display: block;
+    padding: 15px 30px;
+    background-color: rgba(8, 25, 121, 0.5);
+    color: aliceblue;
+  }
+  .link{
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .settings{
+    padding-top: 1.5ex;
+  }

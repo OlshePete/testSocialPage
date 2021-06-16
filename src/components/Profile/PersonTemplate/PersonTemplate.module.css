@@ -1,0 +1,24 @@
+.person_template{
+  display: grid;
+  grid-template-areas: 
+  "logo info";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 5fr;
+  grid-column-gap: 30px;
+  padding: 15px;
+}
+.item{
+  margin-top: 6px;
+}
+.nick_name{
+  padding: 25px 0;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+.info {
+  grid-area: info;
+}
+.person_template img{
+  grid-area: logo;  
+  border-radius: 50px;
+}

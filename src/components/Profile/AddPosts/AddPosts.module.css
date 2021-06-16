@@ -1,0 +1,22 @@
+.content{
+    width: 90%;
+    padding: 1px;
+  }
+  .title{
+    padding: 15px 0;
+    font-size: 1.2em;
+  }
+  .input textarea{
+    width: 100%;
+    border: none;
+    background-color: rgba(8, 25, 121, 0.2);
+    margin-bottom: 10px;
+    font-size: 1em;
+  }
+  .button  {
+    text-align: right;
+  }
+  .button  button{
+    font-size: 1em;
+    cursor: pointer;
+  }
