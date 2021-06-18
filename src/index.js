@@ -4,6 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+export let dialogsData = [
+  {
+    id: 0,
+    name: "Pete",
+  },
+  {
+    id: 1,
+    name: "Tatiana",
+  },
+  {
+    id: 2,
+    name: "Vladimir",
+  },
+  {
+    id: 3,
+    name: "Alexey",
+  },
+  {
+    id: 4,
+    name: "Nikolay",
+  },
+];
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -15,3 +38,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+

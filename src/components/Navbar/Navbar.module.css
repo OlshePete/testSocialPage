@@ -6,9 +6,17 @@
     background-color: rgba(8, 25, 121, 0.5);
     color: aliceblue;
   }
-  .link{
+  .link a{
     margin-bottom: 20px;
     cursor: pointer;
+    text-decoration: none;
+    color: azure;
+  }
+  .link a.activeLink{
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: lightgoldenrodyellow;
   }
   .settings{
     padding-top: 1.5ex;

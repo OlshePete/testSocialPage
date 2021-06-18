@@ -2,7 +2,8 @@
   .item{
     display: grid;
     grid-template-areas: 
-    "img p";
+    "img p"
+    "like icon";
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 11fr;
     margin-bottom: 25px;
@@ -16,4 +17,10 @@
     height: 60px;
     border-radius: 50px;
     display: block;
+  } 
+  .item .icon{
+    grid-area: icon;
+  }
+  .item .like{
+    grid-area: like;
   }
