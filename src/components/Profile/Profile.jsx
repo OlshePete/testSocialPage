@@ -11,8 +11,8 @@ const Profile = (props) => {
     <div className={s.content}>
       <BackImg />
       <PersonTemplate />
-      <AddPosts addPost={props.addPost}/>
-      <MyPosts posts={props.posts}/>
+      <AddPosts updateNewPostText={props.updateNewPostText} addPost={props.addPost} newPostText={props.newPostText}/>
+      <MyPosts posts={props.posts.postDB}/>
     </div>
   )
 }
