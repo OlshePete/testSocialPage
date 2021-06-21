@@ -11,7 +11,7 @@ const Profile = (props) => {
     <div className={s.content}>
       <BackImg />
       <PersonTemplate />
-      <AddPosts />
+      <AddPosts addPost={props.addPost}/>
       <MyPosts posts={props.posts}/>
     </div>
   )

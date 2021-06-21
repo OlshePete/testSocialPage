@@ -10,13 +10,14 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
 function App(props) {
+  console.log (props);
   return (
     <BrowserRouter>
       <div className="app_wrapper">
         <Header />
         <Navbar />
         <div className="content">
-          <Route path='/profile'  render={ () => <Profile posts={props.state.profilePage.postDB} />} />
+          <Route path='/profile'  render={ () => <Profile posts={props.state.profilePage.postDB} addPost={props.addPost} />} />
           <Route exact path='/dialogs'  render={ () => <Dialogs users={props.state.messagePage.dialogsData} messagesList={props.state.messagePage.messagesDB}/>} />
           <Route path='/news'  render={ () => <News/>} />
           <Route path='/music'  render={ () => <Music/>} />
