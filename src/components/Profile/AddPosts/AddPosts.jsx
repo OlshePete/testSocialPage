@@ -6,11 +6,11 @@ const AddPosts = (props) => {
 
 
   let addPost = () => {
-    props.addPost();
+    props.dispatch({type: "ADD-POST"});
   }
-  let updatePost = () => {
+  let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.updateNewPostText(text);
+    props.dispatch({type: "UPDATE_NEW_POST_TEXT", newText: text});
 
   }
 
@@ -18,7 +18,7 @@ const AddPosts = (props) => {
     <div className={s.content}>
       <div className={s.title}>Add new post</div>
       <div className={s.input}>
-        <textarea ref={newPostElement} onChange={updatePost} type="text" name="name" rows="4" value={props.newPostText} /></div>
+        <textarea ref={newPostElement} onChange={onPostChange} type="text" name="name" rows="4" value={props.newPostText} /></div>
       <div className={s.button}><button onClick={addPost} type="submit">Send</button>
       </div>
     </div>
