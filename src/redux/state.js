@@ -56,6 +56,7 @@ let store = {
           { id: 3, text: "My lord, how old are you?" },
           { id: 4, text: "My lord, how old are you?" },
         ],
+        newMessageText:"hjg",
       },
     },
   _callSubscriber() {
@@ -78,6 +79,19 @@ let store = {
     this._state.profilePage.newPostText = newText;
     this._callSubscriber(this._state);
   },
+  _addMessage() {
+    let newMessage = {
+      id: this._state.messagePage.messagesDB.length + 1,
+      text: this._state.messagePage.newMessageText,
+    };
+      this._state.messagePage.messagesDB.push(newMessage);
+      this._state.messagePage.newMessageText="";
+      this._callSubscriber(this._state);
+  },
+  _updateNewMessageText(newText) {
+    this._state.messagePage.newMessageText = newText;
+    this._callSubscriber(this._state);
+  },
   subscribe(observer) {
     this._callSubscriber = observer;
   },
@@ -86,7 +100,11 @@ let store = {
       this._addPost();
     } else if (action.type === "UPDATE_NEW_POST_TEXT"){
       this._updateNewPostText(action.newText);
-    }
+    } else if (action.type === "UPDATE_NEW_MESSAGE_TEXT"){
+      this._updateNewMessageText(action.newText);
+    } else if (action.type === "ADD-MESSAGE"){
+      this._addMessage();
+    } 
   }
 }
 
