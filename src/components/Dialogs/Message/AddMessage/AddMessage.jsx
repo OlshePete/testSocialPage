@@ -1,16 +1,16 @@
 import React from 'react';
+import { addMessageCreator, updateNewMessageTextCreator } from '../../../../redux/dialogsReducer';
 import s from "./AddMessage.module.css"
 
-let newMessageElement = React.createRef();
 const AddMessage = (props) => {
 
 
   let addMessage = () => {
-    props.dispatch({type: "ADD-MESSAGE"});
+    props.dispatch(addMessageCreator());
   }
-  let onMessageChange = () => {
-    let text = newMessageElement.current.value;
-    props.dispatch({type: "UPDATE_NEW_MESSAGE_TEXT", newText: text});
+  let onMessageChange = (e) => {
+    let text = e.target.value;
+    props.dispatch(updateNewMessageTextCreator(text));
 
   }
 
@@ -18,7 +18,7 @@ const AddMessage = (props) => {
     <div className={s.content}>
       <div className={s.title}>Add new message</div>
       <div className={s.input}>
-        <textarea ref={newMessageElement} onChange={onMessageChange} type="text" name="name" rows="4" value={props.newMessageText} /></div>
+        <textarea onChange={onMessageChange} type="text" name="name" rows="4" value={props.newMessageText} placeholder="Enter your message" /></div>
       <div className={s.button}><button onClick={addMessage} type="submit">Send</button>
       </div>
     </div>

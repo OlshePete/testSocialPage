@@ -9,11 +9,16 @@
   text-decoration: none;
   color: gray;
 }
+.dialogs_items a.activeLink{
+  text-decoration: none;
+  color: black;
+}
 .dialog {
   padding: 10px;
 }
 .messages {
   padding: 15px;
+  border: 1px solid green;
 }
 .message {
   color: black;

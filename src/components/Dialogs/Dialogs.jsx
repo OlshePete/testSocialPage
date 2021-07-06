@@ -6,8 +6,8 @@ import AddMessage from './Message/AddMessage/AddMessage';
 
 const Dialogs = (props) => {
 
-  let dialogsMembers = props.messagePage.dialogsData.map(d => (<DialogItem users={props.messagePage.dialogsData} id={d.id} />))
-  let messageItems = props.messagePage.messagesDB.map(d => (<Message id={d.id} message={d.text}/>))
+  let dialogsMembers = props.messagePage.dialogsData.map(d => (<DialogItem key={d.id} users={props.messagePage.dialogsData} id={d.id} />))
+  let messageItems = props.messagePage.messagesDB.map(d => (<Message key={d.id} id={d.id} message={d.text}/>))
 
   return (
     <div className={s.dialogs}>
